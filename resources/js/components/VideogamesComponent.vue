@@ -36,10 +36,11 @@
 
             videogameDelete(id) {
                 // chiamata axios per eliminare un videogame 
+                const self = this;
                 axios.get(`/api/videogame/delete/${id}`)
                      .then(r => {
-                         let index = this.getIndexById(id);
-                         this.videogames.splice(index, 1);
+                         let index = self.getIndexById(id);
+                         self.videogames.splice(index, 1);
                      })
                      .catch(e => console.log('e', e));
             },
@@ -48,7 +49,7 @@
             getIndexById(id) {
                 for(let x = 0; x < this.videogames.length; x++ ) {
 
-                    let videogame = this.videogame[x];
+                    let videogame = this.videogames[x];
                     if(videogame.id == id) 
                         return x;
                 }
