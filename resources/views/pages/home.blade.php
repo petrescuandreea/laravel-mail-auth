@@ -45,6 +45,8 @@
             <button class="btn btn-primary" type="submit" > Register</button>
         </form>
     @endauth
-    
-    <videogames-component></videogames-component>
+
+    {{-- uso il componente videogames 
+        attraverso la prop user che valorizzo con Auth::check() controllo se l'utente è loggato o meno --}}
+    <videogames-component user="{{ Auth::check() }}"></videogames-component>
 @endsection
