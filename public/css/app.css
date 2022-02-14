@@ -10962,3 +10962,11 @@ a.text-dark:focus {
   }
 }
 
+body {
+  text-align: center;
+}
+
+div#videogames-table table {
+  margin: 0 auto;
+}
+

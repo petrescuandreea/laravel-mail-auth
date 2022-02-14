@@ -6,3 +6,13 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    text-align: center;
+}
+
+div#videogames-table {
+    table {
+        margin: 0 auto;
+    }
+}
