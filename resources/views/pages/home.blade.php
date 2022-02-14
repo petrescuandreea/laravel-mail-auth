@@ -3,4 +3,6 @@
     <h2>
         Videogames
     </h2>
+
+    <videogames-component></videogames-component>
 @endsection
