@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-GOAL: come detto a lezione, lo scopo del gioco e' generare una semplice pagina home rappresentante l'entita' Videogame (titolo, sottotilo, rating) dotata di login. La rappresentazione dell'enetita' viene fatta in Vue. Gli utenti collegati hanno la possibilita' di eliminare un'entita'. In fase di eliminazione viene mandata una mail all'utante registrato e una all'amministratore (inventare una mail di default) riportando l'entita' eliminata.
+GOAL: generare una semplice pagina home rappresentante l'entita' Videogame (titolo, sottotilo, rating) dotata di login. La rappresentazione dell'enetita' viene fatta in Vue. Gli utenti collegati hanno la possibilita' di eliminare un'entita'. In fase di eliminazione viene mandata una mail all'utante registrato e una all'amministratore (inventare una mail di default) riportando l'entita' eliminata.
 
 
 
