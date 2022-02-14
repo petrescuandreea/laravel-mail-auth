@@ -13,4 +13,10 @@ class ApiController extends Controller
         $videogames = Videogame::all();
         return json_encode($videogames);
     }
+
+    public function deleteVideogame($id) {
+
+        $videogame = Videogame::findOrFail($id);
+        $videogame -> delete();
+    }
 }
