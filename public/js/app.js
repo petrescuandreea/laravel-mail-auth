@@ -1942,13 +1942,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     videogameDelete: function videogameDelete(id) {
-      var _this = this;
-
       // chiamata axios per eliminare un videogame 
+      var self = this;
       axios.get("/api/videogame/delete/".concat(id)).then(function (r) {
-        var index = _this.getIndexById(id);
-
-        _this.videogames.splice(index, 1);
+        var index = self.getIndexById(id);
+        self.videogames.splice(index, 1);
       })["catch"](function (e) {
         return console.log('e', e);
       });
@@ -1956,7 +1954,7 @@ __webpack_require__.r(__webpack_exports__);
     // metodo per recuperare l'id del videogame che sarà eliminato
     getIndexById: function getIndexById(id) {
       for (var x = 0; x < this.videogames.length; x++) {
-        var videogame = this.videogame[x];
+        var videogame = this.videogames[x];
         if (videogame.id == id) return x;
       }
 
@@ -1964,11 +1962,11 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    var _this2 = this;
+    var _this = this;
 
     // chiamata axios che mi restituisce l'elenco dei videogiochi
     axios.get('/api/videogames/index').then(function (r) {
-      return _this2.videogames = r.data;
+      return _this.videogames = r.data;
     })["catch"](function (e) {
       return console.log(e);
     });
